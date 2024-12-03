@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_application_1/view/chemistry_screen/chemistry_result.dart';
+import 'package:quiz_application_1/view/chemistry_screen/chemistry_screen.dart';
 import 'package:quiz_application_1/view/leader_screen/leader_screen.dart';
 import 'package:quiz_application_1/view/quiz_screen/quiz_screen.dart';
 
@@ -96,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   InkWell(
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => QuizScreen()));
@@ -104,8 +106,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: _buildCategoryTile(
                         Icons.sports_basketball, "Sports", "50 questions",Colors.orangeAccent),
                   ),
-                  _buildCategoryTile(
-                      Icons.science, "Chemistry", "30 questions",Colors.blue),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ChemistryScreen()));
+                    },
+                    child: _buildCategoryTile(
+                        Icons.science, "Chemistry", "30 questions",Colors.blue),
+                  ),
                   _buildCategoryTile(Icons.calculate, "Math", "95 questions",Colors.orange),
                   _buildCategoryTile(
                       Icons.history_edu, "History", "128 questions",Colors.blueGrey),

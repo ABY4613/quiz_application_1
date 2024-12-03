@@ -5,18 +5,19 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:quiz_application_1/u/color_const.dart';
+import 'package:quiz_application_1/view/chemistry_screen/chemistry_result.dart';
 import 'package:quiz_application_1/view/dummydb.dart';
 import 'package:quiz_application_1/view/quiz_screen/results_screen.dart';
 
 
-class QuizScreen extends StatefulWidget {
-  const QuizScreen({super.key});
+class ChemistryScreen extends StatefulWidget {
+  const ChemistryScreen({super.key});
 
   @override
-  State<QuizScreen> createState() => _QuizScreenState();
+  State<ChemistryScreen> createState() => _QuizScreenState();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _QuizScreenState extends State<ChemistryScreen> {
   int currentQuestionIndex = 0;
   int? selectedAnsIndex;
   int rightAnsCount = 0;
@@ -48,7 +49,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   // Function to move to the next question
   void nextQuestion() {
-    if (currentQuestionIndex < DummyDb.sportsquestions.length - 1) {
+    if (currentQuestionIndex < DummyDb.Chemistry.length - 1) {
       currentQuestionIndex++;
       selectedAnsIndex = null;
       startCountdown(); // Restart countdown for next question
@@ -78,8 +79,8 @@ class _QuizScreenState extends State<QuizScreen> {
       
       appBar: AppBar(
         backgroundColor: ColorConstants.offWhite,
-        actions: [Text('${currentQuestionIndex + 1}/${DummyDb.sportsquestions.length}')],
-        title: Text("Sports questions"),
+        actions: [Text('${currentQuestionIndex + 1}/${DummyDb.Chemistry.length}')],
+        title: Text("chemistry questions"),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -118,13 +119,13 @@ class _QuizScreenState extends State<QuizScreen> {
     
       
                     if(selectedAnsIndex == 
-                    DummyDb.sportsquestions[currentQuestionIndex]["answerIndex"])
+                    DummyDb.Chemistry[currentQuestionIndex]["answerIndex"])
                     Align(
                       alignment: Alignment.center,
                       child: Lottie.asset("assets/animations/popper_animation.json")),
                     Align(
                       alignment: Alignment.center,
-                      child: Text(DummyDb.sportsquestions[currentQuestionIndex]["question"],
+                      child: Text(DummyDb.Chemistry[currentQuestionIndex]["question"],
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -148,7 +149,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       if (selectedAnsIndex == null) {
                         selectedAnsIndex = optionIndex;
                         if (selectedAnsIndex ==
-                            DummyDb.sportsquestions[currentQuestionIndex]
+                            DummyDb.Chemistry[currentQuestionIndex]
                                 ["answerIndex"]) {
                           rightAnsCount++;
                           log("right ans count = $rightAnsCount");
@@ -166,7 +167,7 @@ class _QuizScreenState extends State<QuizScreen> {
                         children: [
                           Expanded(
                             child: Text(
-                                DummyDb.sportsquestions[currentQuestionIndex]
+                                DummyDb.Chemistry[currentQuestionIndex]
                                     ["options"][optionIndex],
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -188,7 +189,7 @@ class _QuizScreenState extends State<QuizScreen> {
             if (selectedAnsIndex != null)
               InkWell(
                 onTap: () {
-                  if (currentQuestionIndex < DummyDb.sportsquestions.length - 1) {
+                  if (currentQuestionIndex < DummyDb.Chemistry.length - 1) {
                     currentQuestionIndex++;
                     selectedAnsIndex = null;
                     setState(() {});
@@ -199,7 +200,7 @@ class _QuizScreenState extends State<QuizScreen> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ResultsScreen(
+                          builder: (context) => ChemistryResult(
                             rightAnsCount: rightAnsCount,
                           ),
                         ));
@@ -233,7 +234,7 @@ class _QuizScreenState extends State<QuizScreen> {
     // to check whether an answer is selected or not
     if (selectedAnsIndex != null) {
       //to check whether the option is right or not
-      if (DummyDb.sportsquestions[currentQuestionIndex]["answerIndex"] ==
+      if (DummyDb.Chemistry[currentQuestionIndex]["answerIndex"] ==
           optionIndex) {
         return Colors.green;
       }
@@ -243,7 +244,7 @@ class _QuizScreenState extends State<QuizScreen> {
     if (selectedAnsIndex == optionIndex) {
       //to check whether the  selected answer is right or not
       if (selectedAnsIndex ==
-          DummyDb.sportsquestions[currentQuestionIndex]["answerIndex"]) {
+          DummyDb.Chemistry[currentQuestionIndex]["answerIndex"]) {
         // if answer is right (green color)
         return Colors.green;
       } else {

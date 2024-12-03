@@ -1,70 +1,110 @@
 class DummyDb {
-  static List<Map<String, dynamic>>  sportsquestions = [
+  static List<Map<String, dynamic>> sportsquestions = [
     {
-      "question": "What widget is used to create scrollable lists in Flutter?",
-      "options": ["Column", "Row", "ListView", "Container"],
-      "answerIndex": 2, // ListView
+      "question": "Which country won the FIFA World Cup in 2018?",
+      "options": ["Germany", "France", "Brazil", "Argentina"],
+      "answerIndex": 1, // France
     },
     {
-      "question": "Which method is used to update the UI in StatefulWidget?",
-      "options": ["build()", "initState()", "setState()", "dispose()"],
-      "answerIndex": 2, // setState()
+      "question": "What is the national sport of Japan?",
+      "options": ["Judo", "Karate", "Sumo Wrestling", "Baseball"],
+      "answerIndex": 2, // Sumo Wrestling
     },
     {
-      "question": "Which Flutter widget is used to render a piece of text?",
-      "options": ["Container", "Row", "Text", "Scaffold"],
-      "answerIndex": 2, // Text
+      "question": "In cricket, how many players are on the field for one team?",
+      "options": ["9", "10", "11", "12"],
+      "answerIndex": 2, // 11
     },
     {
-      "question": "What is the purpose of the 'pubspec.yaml' file in Flutter?",
-      "options": [
-        "Define the project’s assets and dependencies",
-        "Store app UI components",
-        "Contain compiled code",
-        "Manage device storage"
-      ],
-      "answerIndex": 0, // Define the project’s assets and dependencies
+      "question": "Which athlete has won the most Olympic gold medals?",
+      "options": ["Usain Bolt", "Michael Phelps", "Carl Lewis", "Simone Biles"],
+      "answerIndex": 1, // Michael Phelps
     },
     {
-      "question":
-          "Which widget is commonly used for creating app layouts in Flutter?",
-      "options": ["Scaffold", "Stack", "AppBar", "Drawer"],
-      "answerIndex": 0, // Scaffold
+      "question": "What is the duration of a standard football (soccer) match?",
+      "options": ["60 minutes", "90 minutes", "120 minutes", "45 minutes"],
+      "answerIndex": 1, // 90 minutes
     },
     {
-      "question": "What is Flutter primarily used for?",
-      "options": [
-        "Web development",
-        "Mobile app development",
-        "Desktop app development",
-        "All of the above"
-      ],
-      "answerIndex": 3, // All of the above
+      "question": "In which sport would you perform a slam dunk?",
+      "options": ["Tennis", "Basketball", "Volleyball", "Baseball"],
+      "answerIndex": 1, // Basketball
     },
     {
-      "question": "Which company developed Flutter?",
-      "options": ["Apple", "Microsoft", "Google", "Facebook"],
-      "answerIndex": 2, // Google
+      "question": "What is the highest governing body of cricket?",
+      "options": ["ICC", "FIFA", "IOC", "FIBA"],
+      "answerIndex": 0, // ICC
     },
     {
-      "question":
-          "What is the main language used to write Flutter applications?",
-      "options": ["JavaScript", "Python", "Swift", "Dart"],
-      "answerIndex": 3, // Dart
+      "question": "Which country has won the most Olympic medals in hockey?",
+      "options": ["Australia", "India", "Germany", "Netherlands"],
+      "answerIndex": 1, // India
     },
     {
-      "question":
-          "In Flutter, which widget is used to add padding around a child widget?",
-      "options": ["Padding", "Center", "Align", "Column"],
-      "answerIndex": 0, // Padding
+      "question": "How many points is a touchdown worth in American football?",
+      "options": ["3", "6", "7", "10"],
+      "answerIndex": 1, // 6
     },
     {
-      "question": "Which Flutter package is widely used for state management?",
-      "options": ["dio", "provider", "url_launcher", "http"],
-      "answerIndex": 1, // provider
+      "question": "Which Grand Slam tournament is played on clay courts?",
+      "options": ["Wimbledon", "US Open", "French Open", "Australian Open"],
+      "answerIndex": 2, // French Open
     },
   ];
-  
 
-  DummyDb(question);
+ 
+    
+      
+  static List<Map<String, dynamic>> Chemistry = [
+    {
+      "question": "Which country won the FIFA World Cup in 2018?",
+      "options": ["Germany", "France", "Brazil", "Argentina"],
+      "answerIndex": 1, // France
+    },
+    {
+      "question": "What is the national sport of Japan?",
+      "options": ["Judo", "Karate", "Sumo Wrestling", "Baseball"],
+      "answerIndex": 2, // Sumo Wrestling
+    },
+    {
+      "question": "In cricket, how many players are on the field for one team?",
+      "options": ["9", "10", "11", "12"],
+      "answerIndex": 2, // 11
+    },
+    {
+      "question": "Which athlete has won the most Olympic gold medals?",
+      "options": ["Usain Bolt", "Michael Phelps", "Carl Lewis", "Simone Biles"],
+      "answerIndex": 1, // Michael Phelps
+    },
+    {
+      "question": "What is the duration of a standard football (soccer) match?",
+      "options": ["60 minutes", "90 minutes", "120 minutes", "45 minutes"],
+      "answerIndex": 1, // 90 minutes
+    },
+    {
+      "question": "In which sport would you perform a slam dunk?",
+      "options": ["Tennis", "Basketball", "Volleyball", "Baseball"],
+      "answerIndex": 1, // Basketball
+    },
+    {
+      "question": "What is the highest governing body of cricket?",
+      "options": ["ICC", "FIFA", "IOC", "FIBA"],
+      "answerIndex": 0, // ICC
+    },
+    {
+      "question": "Which country has won the most Olympic medals in hockey?",
+      "options": ["Australia", "India", "Germany", "Netherlands"],
+      "answerIndex": 1, // India
+    },
+    {
+      "question": "How many points is a touchdown worth in American football?",
+      "options": ["3", "6", "7", "10"],
+      "answerIndex": 1, // 6
+    },
+    {
+      "question": "Which Grand Slam tournament is played on clay courts?",
+      "options": ["Wimbledon", "US Open", "French Open", "Australian Open"],
+      "answerIndex": 2, // French Open
+    },
+  ];
 }
